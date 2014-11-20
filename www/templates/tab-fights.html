@@ -1,0 +1,9 @@
+<ion-view title="Fights">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="fight in fights" type="item-text-wrap" href="#/tab/fight/{{fight.id}}">
+        {{ fight.fighter1 }} vs {{ fight.fighter2 }}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

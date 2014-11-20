@@ -1,0 +1,41 @@
+<ion-view title="Scorecard">
+  <ion-content>
+
+<div id='card-container' style='text-align:center' ng-controller='ScorecardCtrl'>
+  <h2><strong>Round {{ roundNum }}</strong></h2>
+
+  <form ng-submit='nextRound()'>
+    <h4>{{ fighter1 }}</h4>
+    <input type='radio' id='score10a' name='fighter1' value='10' checked>
+      <label for='score10a'>10</label>
+    <input type='radio' id='score9a' name='fighter1' value='9'>
+      <label for='score9a'>9</label>
+    <input type='radio' id='score8a' name='fighter1' value='8'>
+      <label for='score8a'>8</label>
+    <input type='radio' id='score7a' name='fighter1' value='7'>
+      <label for='score7a'>7</label>
+    <input type='radio' id='score6a' name='fighter1' value='6'>
+      <label for='score6a'>6</label>
+
+    <h4>{{ fighter2 }}</h4>
+    <input type='radio' id='score10b' name='fighter2' value='10' checked>
+      <label for='score10b'>10</label>
+    <input type='radio' id='score9b' name='fighter2' value='9'>
+      <label for='score9b'>9</label>
+    <input type='radio' id='score8b' name='fighter2' value='8'>
+      <label for='score8b'>8</label>
+    <input type='radio' id='score7b' name='fighter2' value='7'>
+      <label for='score7b'>7</label>
+    <input type='radio' id='score6b' name='fighter2' value='6'>
+      <label for='score6b'>6</label>
+
+    <br><br>
+
+    <input type='submit' value='Next Round' action='nextRound()' ng-hide='roundNum == 12'>
+    <input type='submit' value='Submit' action='nextRound()' ng-hide='roundNum != 12'>
+  </form>
+</div>
+
+  </ion-content>
+</ion-view>
+
