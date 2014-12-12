@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'firebase', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -48,24 +48,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-    .state('tab.friends', {
-      url: '/friends',
-      views: {
-        'tab-friends': {
-          templateUrl: 'templates/tab-friends.html',
-          controller: 'FriendsCtrl'
-        }
-      }
-    })
-    .state('tab.friend-detail', {
-      url: '/friend/:friendId',
-      views: {
-        'tab-friends': {
-          templateUrl: 'templates/friend-detail.html',
-          controller: 'FriendDetailCtrl'
-        }
-      }
-    })
+    // .state('tab.friends', {
+    //   url: '/friends',
+    //   views: {
+    //     'tab-friends': {
+    //       templateUrl: 'templates/tab-friends.html',
+    //       controller: 'FriendsCtrl'
+    //     }
+    //   }
+    // })
+    // .state('tab.friend-detail', {
+    //   url: '/friend/:friendId',
+    //   views: {
+    //     'tab-friends': {
+    //       templateUrl: 'templates/friend-detail.html',
+    //       controller: 'FriendDetailCtrl'
+    //     }
+    //   }
+    // })
 
     .state('tab.fights', {
       url: '/fights',
@@ -82,16 +82,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         'tab-fights': {
           templateUrl: 'templates/fight-scorecard.html',
           controller: 'FightScorecardCtrl'
-        }
-      }
-    })
-
-    .state('tab.scorecard', {
-      url: '/scorecard',
-      views: {
-        'tab-scorecard': {
-          templateUrl: 'templates/tab-scorecard.html',
-          controller: 'ScorecardCtrl'
         }
       }
     })

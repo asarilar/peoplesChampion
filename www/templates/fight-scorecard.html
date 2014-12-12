@@ -7,29 +7,29 @@
   <form ng-submit='nextRound()'>
     <h4>{{ fight.fighter1 }}</h4>
     <input type='radio' id='score10a' name='fighter1' value='10' checked>
-      <label for='score10a'>10</label>
+      <label for='score10a'><b>10</b></label>
     <input type='radio' id='score9a' name='fighter1' value='9'>
-      <label for='score9a'>9</label>
+      <label for='score9a'><b>9</b></label>
     <input type='radio' id='score8a' name='fighter1' value='8'>
-      <label for='score8a'>8</label>
+      <label for='score8a'><b>8</b></label>
     <input type='radio' id='score7a' name='fighter1' value='7'>
-      <label for='score7a'>7</label>
+      <label for='score7a'><b>7</b></label>
     <input type='radio' id='score6a' name='fighter1' value='6'>
-      <label for='score6a'>6</label>
+      <label for='score6a'><b>6</b></label>
 
     <br><br>
 
     <h4>{{ fight.fighter2 }}</h4>
     <input type='radio' id='score10b' name='fighter2' value='10' checked>
-      <label for='score10b'>10</label>
+      <label for='score10b'><b>10</b></label>
     <input type='radio' id='score9b' name='fighter2' value='9'>
-      <label for='score9b'>9</label>
+      <label for='score9b'><b>9</b></label>
     <input type='radio' id='score8b' name='fighter2' value='8'>
-      <label for='score8b'>8</label>
+      <label for='score8b'><b>8</b></label>
     <input type='radio' id='score7b' name='fighter2' value='7'>
-      <label for='score7b'>7</label>
+      <label for='score7b'><b>7</b></label>
     <input type='radio' id='score6b' name='fighter2' value='6'>
-      <label for='score6b'>6</label>
+      <label for='score6b'><b>6</b></label>
 
     <br><br>
 
@@ -37,6 +37,9 @@
     <input type='submit' value='Submit' action='nextRound()' ng-hide='roundNum != 12'>
   </form>
 </div>
+
+<p>{{ fight.fighter1 }}: {{ fighter1scores | json }} Total: {{ total1 }}</p>
+<p>{{ fight.fighter2 }}: {{ fighter2scores | json }} Total: {{ total2 }}</p>
 
   </ion-content>
 </ion-view>
